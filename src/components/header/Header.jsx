@@ -19,9 +19,10 @@ const Header = () => {
 			<div className={styles.info}>
 				<div className={styles.user}>
 					<div className={styles.avatar} style={{ backgroundImage: `url(${AVATAR})`}} />
+					
+					<div className={styles.username}>Guest</div>
 				</div>
 
-				<div className={styles.username}>Guest</div>
 
 				<form className={styles.form}>
 					<div className={styles.icon}>
@@ -41,7 +42,7 @@ const Header = () => {
 						/>
 					</div>
 
-					<div className={styles.box}></div>
+					{false && <div className={styles.box}></div>}
 				</form>
 
 				<div className={styles.account}>
