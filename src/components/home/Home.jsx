@@ -1,15 +1,17 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Categories from "../categories/Categories";
 import Poster from "../poster/Poster";
 import Products from "../product/Product";
 
 const Home = () => {
-	const { list } = useSelector(({ products }) => products);
+	const { products, categories } = useSelector((state) => state);
 
 	return (
 		<>
 			<Poster />
-			<Products products={list} amount={5} title='Trending'/>
+			<Products products={products.list} amount={5} title='Trending' />
+			<Categories products={categories.list} amount={5} title='Worth seeing' />
 		</>
 	)
 };
