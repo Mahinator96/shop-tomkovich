@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
+
 import { getCategories } from "../../features/categories/categoriesSlice";
+import { getProducts } from "../../features/products/productsSlice";
 
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
@@ -12,7 +14,8 @@ const App = () => {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(getCategories())
+		dispatch(getCategories());
+		dispatch(getProducts());
 	})
 
 	return (
